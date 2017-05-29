@@ -25,17 +25,29 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
+<!-- SCRIPTS -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/riot/3.5.1/riot+compiler.min.js"></script>
+
 </head>
 <body>
 
 
-<p>gagag</p>
-<!-- SCRIPTS -->
-<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+<todo></todo>
 
+<script src="tag/todo.html" type="riot/tag"></script>
+
+<script>
+	riot.mount('todo',{
+		title: 'I want to behave!',
+		items: [
+			{ title: 'Avoid excessive caffeine', done: true },
+			{ title: 'Hidden item', hidden: true },
+			{ title: 'Be less provocative' },
+			{ title: 'Be nice to peaple' }
+		]
+	})
+</script>
 
 </body>
 </html>
